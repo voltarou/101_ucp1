@@ -5,6 +5,7 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3000;
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -15,13 +16,13 @@ app.post('/kandang', async (req, res) => {
     res.status(201).json(newKandang);
   }
     catch (error) {
+      console.log(error);
     res.status(500).json({ error: 'Failed to create kandang' });
   }
 });
 
-
-app.get('/kandang/:id', async (req, res) => {
-  const kandangid = req.params.id;
+app.get('/kandang', async (req, res) => {
+    const kandangid = req.params.id;
     try {
     const kandang = await db.kandang.findByPk(kandangid);
     if (!kandang) {

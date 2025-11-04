@@ -7,24 +7,24 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        Nama_Hewan: {
+        nama_hewan: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Nama_Petugas: {
+        nama_petugas: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Usia_Hewan: {
+        usia_Hewan: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Jenis_kelamin: {
+        jenis_kelamin: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Tahun_Lahir: {
-            type: DataTypes.INTEGER,
+        tahun_lahir: {
+            type: DataTypes.STRING,
             allowNull: false
         }
     }, {
